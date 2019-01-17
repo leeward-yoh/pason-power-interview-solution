@@ -1,0 +1,73 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "commonjs": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": [
+    "react", "babel", "flowtype"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "yoda": 0,
+    "max-len": 0,
+    "one-var": 0,
+    "one-var-declaration-per-line": 0,
+    "object-curly-spacing": 0,
+    "default-case": 0,
+    "no-underscore-dangle": 0,
+    "no-confusing-arrow": 0,
+    "no-continue": 0,
+    "no-nested-ternary": 0,
+    "no-restricted-syntax": 0,
+    "global-require": 0,
+    "no-plusplus": 0,
+    "no-multi-assign": 0,
+    "object-curly-newline": ["error", { "multiline": true, "consistent": true }],
+    "func-names": 0,
+    "no-param-reassign": 0,
+    "function-paren-newline": 0,
+    "import/prefer-default-export": 0,
+    // use babel-plugin-flow-react-proptypes instead
+    "react/prop-types": 0,
+    // let flow handle props
+    "react/no-unused-prop-types": 0,
+    "react/require-default-props": 0,
+    // For now allow multiple classes per file
+    "react/no-multi-comp": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/jsx-max-props-per-line": 0,
+    // FLOWTYPE RULES
+    "flowtype/boolean-style": [2, "boolean"],
+    "flowtype/define-flow-type": 1,
+    "flowtype/generic-spacing": [2, "never"],
+    "flowtype/no-primitive-constructor-types": 2,
+    "flowtype/require-parameter-type": [2, { "excludeArrowFunctions": "expressionsOnly" }],
+    "flowtype/require-return-type": [2, "always", { "annotateUndefined": "never", "excludeArrowFunctions": true }],
+    "flowtype/require-valid-file-annotation": 2,
+    "flowtype/semi": [2, "never"],
+    "flowtype/space-after-type-colon": [2, "always"],
+    "flowtype/space-before-generic-bracket": [2, "never"],
+    "flowtype/space-before-type-colon": [2, "never"],
+    "flowtype/union-intersection-spacing": [2, "always"],
+    "flowtype/use-flow-type": 1,
+    "flowtype/valid-syntax": 1
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "globals": {
+    "$Shape": true
+  }
+}

@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  webapp:
+    build: .
+    ports:
+        - "8888:8888"
+    links:
+        - influxdb
+  influxdb:
+    image: influxdb:alpine
+    ports:
+        - "8086:8086"
+    volumes:
+        - ./influxdb/data:/var/lib/influxdb
+  load_data:
+    build: ./influxdb/load_data
+    depends_on:
+        - influxdb
